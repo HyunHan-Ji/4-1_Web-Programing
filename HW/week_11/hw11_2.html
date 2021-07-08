@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body>
+    <input class="password" type="password" value="hallym">
+    <input type="button" class="button" value="show" onclick="makeClickHandler()">
+    <script>
+         const pass = document.querySelector(".password");
+         const button = document.querySelector(".button");
+
+         function makeClickHandler(){
+             let isShow = false;
+             return function(){
+                 pass.setAttribute('type',isShow ? 'password' : 'text');
+                 isShow = !isShow;
+                 button.innerHTML = isShow ? 'hide' : 'show';
+             };
+         }
+         button.onclick = makeClickHandler();
+    </script>
+</body>
+</html>

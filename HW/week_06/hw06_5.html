@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body>div {
+            width: 500px;
+            height: 130px;
+            border-color: blue;
+            border-width: 3px;
+            border-style: solid;
+            display: inline-block;
+            position: relative;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            color: white;
+            text-align: center;
+        }
+
+        .box:nth-child(1) {
+            background: red;
+            float: left;
+
+        }
+
+        .box:nth-child(2) {
+            background: green;
+            float: left;
+            margin-left: -80px;
+            margin-top: 25px;
+        }
+
+        .box:nth-child(3) {
+            background: blue;
+            float: right;
+            margin: 25px 20px 5px 2px;
+            height: auto;
+            padding: 40px 0;
+        }
+
+        span {
+            visibility: hidden;
+        }
+
+        h1:hover span {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lorem ipsum dolor amet</h1>
+    <div>
+        <div class="box">box item 1</div>
+        <div class="box">box item 2</div>
+        <div class="box">box item 3</div>
+    </div>
+    <h1>Lorem (<span> ipsum dolor amet </span>)</h1>
+</body>
+
+</html>

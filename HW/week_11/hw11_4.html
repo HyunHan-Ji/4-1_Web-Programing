@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>이곳에 결과를 출력합니다</h2>
+        <input type="button" value="현재 날짜 출력" onclick="toDay()"><br><br>
+        <input type="button" value="n일 후의 날짜 출력" onclick="fuDay()">
+        
+        <script>
+            const head = document.querySelector('h2');
+
+            let toDay = () => {        
+                let date = new Date();
+                let day = new Array('일', '월', '화', '수', '목', '금', '토');
+
+                let result = new String();
+                result += date.getFullYear() + '년 ';
+                result += (date.getMonth() + 1) + '월 ';
+                result += date.getDate() + '일 ';
+                result += day[date.getDay()] + '요일 ';
+
+                if(date.getHours() < 12 ) {
+                    result += '오전 ' + date.getHours() + '시 ';
+                } else {
+                    result += '오후 ' + (date.getHours() -12) + '시 ';
+                }
+
+                result += date.getMinutes() + '분 ';
+                
+                head.innerHTML = result;
+            }
+
+            let fuDay = ()=>{
+                let date = new Date();
+                let inputnumber = prompt(`며칠 후 입니까?`);
+                let temp = new Date(date.setDate(date.getDate() + parseInt(inputnumber)) );
+                
+                let result = new String();
+                result += inputnumber + `일 후의 날짜는 `;
+                result += temp.getFullYear() + '년 ';
+                result += (temp.getMonth()+ 1) + '월 ';
+                result += temp.getDate() + '일';
+
+                head.innerHTML = result;                
+            }
+
+        </script>
+    </body>
+</html>

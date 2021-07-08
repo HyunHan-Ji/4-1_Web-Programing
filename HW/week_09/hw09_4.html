@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        let dim = new Array();
+        while (true) {
+            let input = prompt("준비물을 입력하세요\n더 이상 없으면 '완료'를 입력하세요.");
+            if (input == "완료")
+                break;
+            dim.push(input);
+        }
+        alert("여행 준비물 목록을 출력합니다.\n" + dim.toString());
+
+        while (true) {
+            let input = prompt("준비완료된 물품을 입력하세요\n더 이상 없으면 '완료'를 입력하세요.");
+            if (input == "완료")
+                break;
+            dim.splice(dim.indexOf(input), 1);
+        }
+        alert("앞으로 준비해야 할 목록을 출력합니다.\n" + dim.toString());
+    </script>
+</body>
+
+</html>

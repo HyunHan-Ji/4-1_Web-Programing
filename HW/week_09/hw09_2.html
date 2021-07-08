@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        function Car(number, distance){
+            this.number = number,
+            this.distance = distance,
+            this.addMileage = function(dist){
+                distance += dist;
+                document.write("차량번호 : "+ number +" 주행거리를 " + dist + "추가<br>");
+            }
+            this.toString = function(){
+                return "차량번호 : "+ number +" 주행거리 : " + distance + "<br>";
+            }
+        }
+
+        let car = new Car("30마3456",10000);
+        document.write(car.toString());
+        car.addMileage(30);
+        document.write(car.toString());
+
+    </script>
+</body>
+
+</html>

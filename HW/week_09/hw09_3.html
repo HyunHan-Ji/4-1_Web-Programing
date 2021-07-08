@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        function Account(name, balance) {
+            this.name = name;
+            this.balance = balance;
+        }
+        Account.prototype.deposit = function (num) {
+            this.balance += num;
+        }
+        Account.prototype.withdraw = function (num) {
+            if (this.balance > num)
+                this.balance -= num;
+            else {
+                document.write("잔액 부족: " + this.balance + "<br>");
+            }
+        }
+        Account.prototype.display = function () {
+            document.write("예금주 : " + this.name + "<br>현재 잔액 : " + this.balance + "<br><br>");
+        }
+
+        let account = new Account("스크립트", 50000);
+        document.write("현재상태 입니다<br>");
+        account.display();
+
+        document.write("50000 예금 후 상태입니다.<br>");
+        account.deposit(50000);
+        account.display();
+
+        document.write("100000을 인출하려고 합니다.<br>");
+        account.withdraw(100000);
+    </script>
+</body>
+
+</html>

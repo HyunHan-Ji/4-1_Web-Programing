@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <script>
+        function pop() {
+            win = window.open('popUp.html', '', 'width=300, height=300');
+            if (win == null) {
+                alert('팝업이 차단 되었습니다\n팝업 차단을 해제하고 새로고침하세요');
+            }
+            win.moveTo(300, 100);
+        }
+
+        function winOpen() {
+            let keyword = document.getElementById('keyword');
+            let place = 'width=500, height=500, top=300, left=300';
+            switch (keyword.value) {
+                case '한림대학교':
+                    win = window.open('https://www.hallym.ac.kr/', '_blank', place);
+                    wind.moveBy(100, 100);
+                    break;
+                case '도서관':
+                    win = window.open('https://library.hallym.ac.kr', '_blank', place);
+                    wind.moveTo(100, 100);
+                    break;
+                case '도서관':
+                    win = window.open('https://smartlead.hallym.ac.kr', '_blank', place);
+                    break;
+
+            }
+            keyword.value = '';
+        }
+
+        let winClose = function () {
+            win.close();
+        }
+
+        let win = null;
+        window.onload = pop;
+    </script>
+</head>
+
+<body>
+    <h3>윈도우 객체 활용</h3>
+    <hr>
+    <form>
+        키워드를 입력하세요 : <input type="text" id="keyword">
+        <p></p>
+        <input type="button" value="open" onclick="winOpen()">
+        <input type="button" value="close" onclick="winClose()">
+    </form>
+</body>
+
+</html>

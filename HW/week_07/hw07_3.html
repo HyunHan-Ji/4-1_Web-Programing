@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        nav {
+            display: flex;
+            height: 50px;
+            background: mediumspringgreen;
+        }
+
+        div {
+            position: fixed;
+            margin: 10px;
+            padding: 10px;
+            top: 0;
+
+        }
+
+        .menu_left {
+            left: 0;
+        }
+
+        .menu_right {
+            right: 0;
+        }
+
+        ul {
+            display: flex;
+            width: 400px;
+            height: 20px;
+            margin: 0 auto;
+            padding: 5px;
+            position: relative;
+            top: 10px;
+        }
+
+        li {
+            display: inline-block;
+            margin: 0 20px;
+            padding: 0;
+        }
+
+        li:hover {
+            background: blue;
+        }
+
+        @media (max-width: 599px) {
+            ul {
+                flex-direction: column;
+                width: 600px;
+                margin: 40px 0;
+                padding: 0;
+            }
+
+            li {
+                background: mediumspringgreen;
+                margin: 0;
+                padding: 5px 0;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="menu_bar">
+        <div class="menu_left">
+            <a href="">Hallym</a>
+        </div>
+
+        <ul class="menu_item">
+            <li>대학소개</li>
+            <li>전공</li>
+            <li>대학생활</li>
+            <li>학사지원</li>
+        </ul>
+
+        <div class="menu_right">
+            <a href="">smartlead</a>
+        </div>
+    </nav>
+</body>
+
+</html>

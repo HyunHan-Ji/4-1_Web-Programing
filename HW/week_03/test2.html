@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <form>
+        <table border="1">
+            <tr>
+                <th colspan="2">회원가입</th>
+            </tr>
+            <tr>
+                <th>아이디</th>
+                <td><input type="text" required></td>
+            </tr>
+            <tr>
+                <th>패스워드</th>
+                <td><input type="text" required></td>
+            </tr>
+            <tr>
+                <th>성별</th>
+                <td><input type="radio" name="sex" value="1">남
+                    <input type="radio" name="sex" value="2">여
+                </td>
+            </tr>
+            <tr>
+                <th>국적</th>
+                <td>
+                    <input type="text" list="countries">
+                    <datalist id="countries">
+                        <option value="가나"></option>
+                        <option value="브라질"></option>
+                        <option value="스위스"></option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <th>가족사항</th>
+                <td>
+                    <input type="checkbox" value="2" checked>부모
+                    <input type="checkbox" value="3">형제자매
+                    <input type="checkbox" value="4">배우자
+                    <input type="checkbox" value="5">자식
+                </td>
+            </tr>
+            <tr>
+                <th>이력서</th>
+                <td><input type="file" size=40></td>
+            </tr>
+            <tr>
+                <th>생년월일</th>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="가입">
+                    <input type="reset" value="재작성">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

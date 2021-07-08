@@ -1,0 +1,32 @@
+<head>
+    <meta charset="UTF-8">
+    <title>여행지</title>
+    <style>
+        li {
+            color: red;
+        }
+
+        li:nth-child(2n) {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="javascript:insert()">이곳을 클릭하여 가고 싶은 여행지를 입력하세요</a>
+    <ul>희망하는 장소 입니다</ul>
+    <ol></ol>
+    <script>
+        let insert = () => {
+            while (true) {
+                let str = prompt("여행지를 입력하세요. 더 이상 없으면 'f'를 입력하세요.");
+                if (str == 'f') {
+                    break;
+                }
+                const li = document.createElement("li");
+                li.appendChild(document.createTextNode(str));
+                document.querySelector("ol").appendChild(li);
+            }
+        }
+    </script>
+</body>

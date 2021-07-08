@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        let singer = {
+            name: "이소라",
+            title: "바람이 분다",
+            time: 10,
+
+            play: function (cnt) {
+                returnstr = "";
+                for (let i = 1; i <= cnt; i++) {
+                    returnstr += this.name + " : " + this.title + " ==> " + i + " 번째 재생<br>";
+                }
+                return returnstr;
+            }
+        };
+
+        document.write(singer.play(5));
+    </script>
+</body>
+
+</html>
